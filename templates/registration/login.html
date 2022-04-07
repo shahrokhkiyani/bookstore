@@ -16,7 +16,7 @@ Login
     <br>
     <a href="{% url 'signup' %}" class="btn btn-success mt-3"  >Dont have accoutn? Signup</a>
     <br>
-    <a href="password_reset" class="btn btn-danger mt-3">forgot password?</a>
+    <a href="{% url 'password_reset' %}" class="btn btn-danger mt-3">forgot password?</a>
 </form>
 
 {% endblock content %}

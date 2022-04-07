@@ -7,13 +7,15 @@
 {% block content %}
     <h1>Home Page</h1>
     {% if user.is_authenticated %}
-        <p>Welcome {{ user.username }} | <a href="{% url 'logout' %}">Log Out</a> </p>
+        <h1>Welcome {{ user.username }} </h1>
+        <a href="{% url 'logout' %}" class="btn btn-primary">Log Out</a>
     {% else %}
 
-    <a href="{% url 'login' %}">Login</a> | <a href="{% url 'signup' %}">SignUp</a>
+    <a href="{% url 'login' %}" class="btn btn-success" >Login</a> | <a href="{% url 'signup' %}" class="btn btn-primary" >SignUp</a>
 
 
     {% endif %}
-    <a href="{% url 'password_change' %}">password change</a>
+    <br>
+    <a href="{% url 'password_change' %}" class="btn btn-danger mt-3">password change</a>
     
 {% endblock content %}
