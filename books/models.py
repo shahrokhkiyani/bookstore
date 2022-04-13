@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Book(models.Model):
+    # name, description, author, creator, date_time published, cover, publisher, year created
+    
+    
