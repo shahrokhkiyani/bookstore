@@ -12,4 +12,3 @@ class Book(models.Model):
     #? For money we use DeciamlFields
     price= models.DecimalField(desimal_places=2 ,max_digits=5)
     
-
