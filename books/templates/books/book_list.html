@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block title %}
+Books list
+{% endblock title %}
+
+{% block content %}
+{% for book in books %}
+<div class="card text-white bg-secondary mb-3 mt-3" style="max-width: 18rem;">
+    <div class="card-header">{{book.title}}</div>
+    <div class="card-body">
+        {{book.content}}
+    </div>
+</div>
+{% endfor %}
+{% endblock content %}
