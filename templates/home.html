@@ -9,14 +9,13 @@
     {% if user.is_authenticated %}
         <h1>Welcome {{ user.username }} </h1>
         <a href="{% url 'logout' %}" class="btn btn-primary">Log Out</a>
+        <a href="{% url 'password_change' %}" class="btn btn-danger">password change</a>
     {% else %}
 
     <a href="{% url 'login' %}" class="btn btn-success" >Login</a> | <a href="{% url 'signup' %}" class="btn btn-primary" >SignUp</a>
 
 
     {% endif %}
-    <br>
-    <a href="{% url 'password_change' %}" class="btn btn-danger mt-3">password change</a>
     <br>
     <a href="{% url 'book_list' %}" class="btn btn-primary mt-3">Book Store</a>    
 {% endblock content %}
