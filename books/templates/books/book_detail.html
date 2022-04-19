@@ -9,6 +9,8 @@ Books Detail
 <p>{{book.content}}</p>
 <p>{{book.author}}</p>
 <h4>{{book.price}}</h4>
+<a href="{% url 'book_update' book.id %}"><button type="button" class="btn btn-primary">Edit</button></a>
 <br>
 <a href="{% url 'book_list' %}">Book Store</a>
+
 {% endblock content %}

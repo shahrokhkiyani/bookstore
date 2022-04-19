@@ -1,7 +1,7 @@
 {% extends '_base.html' %}
 
 {% block title %}
-Edit Book {{ book.title }}
+Create Book
 {% endblock title %}
 
 {% block content%}
@@ -11,8 +11,7 @@ Edit Book {{ book.title }}
     <table>
         {{ form.as_table }}
     </table>
-    <input type="submit" value='Save'>
+    <input type="submit" value='Edit'>
 </form>
-<a href="{% url 'book_list' %}" class="btn btn-primary mt-3">Book Store</a>
 
 {% endblock content %}
