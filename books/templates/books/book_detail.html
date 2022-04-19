@@ -10,6 +10,8 @@ Books Detail
 <p>{{book.author}}</p>
 <h4>{{book.price}}</h4>
 <a href="{% url 'book_update' book.id %}"><button type="button" class="btn btn-primary">Edit</button></a>
+<a href="{% url 'book_delete' book.id %}"><button type="button" class="btn btn-danger">Delete</button></a>
+
 <br>
 <a href="{% url 'book_list' %}">Book Store</a>
 
