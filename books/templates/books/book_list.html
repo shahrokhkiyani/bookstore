@@ -6,10 +6,12 @@ Books list
 
 {% block content %}
 {% for book in books %}
-<div class="card text-white bg-secondary mb-3 mt-3" style="max-width: 18rem;">
-    <div class="card-header"><a href="{{ book.get_absolute_url }}">{{book.title}}</a></div>
+<div class="card mt-3" style="width: 18rem;">
     <div class="card-body">
-        {{book.content}}
+        <h5 class="card-title"><a href=" {{ book.get_absolute_url }} ">{{book.title | capfirst }}</a></h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{book.author}}</h6>
+        <p class="card-text">{{book.content | truncatewords:10 }}</p>
+        <a href="{% url 'book_detail' book.id %}" class="card-link">Read More ...</a>
     </div>
 </div>
 {% endfor %}
