@@ -6,9 +6,9 @@ Edit Book {{ book.title }}
 
 {% block content%}
 
-<form method="POST" action="">
+<form method="POST" action="" class="form-horizontal mt-3">
     {% csrf_token %}
-    <table>
+    <table class="table mt-3">
         {{ form.as_table }}
     </table>
     <input type="submit" value='Save'>
