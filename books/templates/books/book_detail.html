@@ -5,9 +5,9 @@ Books Detail
 {% endblock title %}
 
 {% block content %}
-<h1>{{book.title}}</h1>
-<p>{{book.content}}</p>
+<h1>{{book.title|capfirst}}</h1>
 <p>{{book.author}}</p>
+<p>{{book.content |linebreaks }}</p>
 <h4>{{book.price}}</h4>
 <a href="{% url 'book_update' book.id %}"><button type="button" class="btn btn-primary">Edit</button></a>
 <a href="{% url 'book_delete' book.id %}"><button type="button" class="btn btn-danger">Delete</button></a>
