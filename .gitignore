@@ -2,4 +2,4 @@
 __pycache__/
 venv
 settings.py
-*.sqlite3
+db.sqlite3
