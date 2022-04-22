@@ -3,3 +3,4 @@ __pycache__/
 venv
 settings.py
 db.sqlite3
+.vscode
