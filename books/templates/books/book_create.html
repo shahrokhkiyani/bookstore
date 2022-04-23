@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block title %}
-Edit Book {{ book.title }}
+ساخت کتاب
 {% endblock title %}
 
 {% block content%}
@@ -14,7 +14,7 @@ Edit Book {{ book.title }}
             <div class="card shadow my-3">
                 <h5 class="card-header bg-success text-light px-5">فرم</h5>
                 <div class="px-5 pt-3 pb-5">
-                    <form method="POST">
+                    <form method="POST" enctype="multipart/form-data" >
                         {% csrf_token %}
                         {{form|crispy}}
                         <button type="submit" class="btn btn-success mt-2">ذخیره</button>
