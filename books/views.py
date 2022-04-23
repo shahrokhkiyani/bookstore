@@ -23,6 +23,7 @@ class BookCreateView(generic.CreateView):
         "author",
         "content",
         "price",
+        "cover",
     ]
     template_name = "books/book_create.html"
 
