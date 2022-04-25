@@ -4,3 +4,5 @@ venv
 settings.py
 db.sqlite3
 .vscode
+*.jpg
+*.png

@@ -23,6 +23,7 @@ Books Detail
                         <h1> {{ book.title }} </h1>
                         <h5 class="small my-1"><span class="text-muted">نویسنده: </span>{{book.author}}</h5>
                         <h5 class="small my-1"><span class="text-muted">انتشارات: </span>هوزمزد</h5>
+                        <a href="{% url 'book_update' book.id %}">ویرایش</a>
                     </div>
                     <div class="col-xs-12 col-md-3 d-flex flex-column">
                         <h3 class="align-self-center pt-2 text-muted align-self-md-end">
