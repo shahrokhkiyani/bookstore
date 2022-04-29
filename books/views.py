@@ -24,6 +24,10 @@ def book_detail_view(request, pk):
         comment_form = CommentForm(request.POST)
         if comment_form.is_valid():
             new_comment = comment_form.save(commit=False)
+            new_comment.book = book
+            new_comment.user = request.user
+            new_comment.save()
+            comment_form = CommentForm()
     else:
         comment_form = CommentForm()
 
