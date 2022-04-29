@@ -12,6 +12,7 @@ class CommentAdmin(admin.ModelAdmin):
         "datetime_created",
     )
 
+
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     list_display = ("title", "author")
