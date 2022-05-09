@@ -41,7 +41,7 @@
             <div class="mx-2 text-white">
                 {% if user.is_authenticated %}
                 
-                خوش آمدی {{ user.username }} | <a class="link-light text-decoration-none" href="{% url 'logout' %}">خروج</a>
+                خوش آمدی {{ user.username|title }} | <a class="link-light text-decoration-none" href="{% url 'logout' %}">خروج</a>
                 {% else %}
 
                 <a class="text-decoration-none" href="{% url 'login' %}">ورود</a>
